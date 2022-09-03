@@ -1,3 +1,4 @@
+// Get random int in range 1-3 from computer, assign that int to a variable for later comaprison.
 let compChoice = 0;
 
 function getComputerChoice () {
@@ -8,4 +9,15 @@ function getComputerChoice () {
 
 compChoice = getComputerChoice();
 
-console.log(compChoice);
+//Get user choice of rock paper or scissors
+let userChoice = prompt("Choose Rock, Paper or Scissors: ");
+
+if (userChoice === 'Rock') {
+    userChoice = 1
+} else if (userChoice === 'Paper') {
+    userChoice = 2
+} else if (userChoice === 'Scissors') {
+    userChoice = 3
+} else {
+    alert('Please select a right choice.')
+};
