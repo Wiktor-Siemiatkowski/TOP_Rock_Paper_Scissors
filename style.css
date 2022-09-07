@@ -3,6 +3,10 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     height: 100%;
     background-repeat: no-repeat;
@@ -26,4 +30,9 @@ body {
       hsl(125.96, 63.18%, 46.52%) 95.4%,
       hsl(125.96, 63.18%, 46.86%) 100%
     );
-  };
+  }
+
+  .score {
+    margin: 40px;
+    font-size: 32px;
+  }
