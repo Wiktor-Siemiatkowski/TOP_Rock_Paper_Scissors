@@ -4,8 +4,12 @@ let userChoice = null;
 let compScore = 0;
 let userScore = 0;
 //DOM modifiers
-const btns = document.querySelectorAll('.btn')
-const outcomemsg = document.querySelector('.outcome')
+const body = document.querySelector('body');
+const resetBtn = document.createElement('button');
+resetBtn.classList.add('reset');
+resetBtn.textContent = 'Restart Game';
+const btns = document.querySelectorAll('.btn');
+const outcomemsg = document.querySelector('.outcome');
 const showScore = document.querySelector('.score');
 const choiceRock = document.querySelector('.rock');
 const choicePaper = document.querySelector('.paper');
@@ -30,6 +34,10 @@ if (userScore === 5 || compScore === 5) {
     } else {
         outcomemsg.textContent = 'Sorry, you\'ve lost the game.'
     }
+    body.appendChild(resetBtn);
+    resetBtn.addEventListener('click', () => {
+        reset();
+    })
 }}
 
 //main gameplay function
@@ -70,3 +78,14 @@ choiceScissors.addEventListener('click', () => {
     playOneRound();
 })
 
+//reset button function
+function reset () {
+    userScore = 0;
+    compScore = 0;
+    body.removeChild(resetBtn);
+    btns.forEach((element) => {
+        element.removeAttribute('disabled')
+    });
+    showScore.textContent = `Your score --> ${userScore} ${compScore} <-- AI score`;
+    outcomemsg.textContent = '';
+}
