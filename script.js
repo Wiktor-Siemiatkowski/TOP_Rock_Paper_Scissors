@@ -58,7 +58,7 @@ function playOneRound () {
         outcomemsg.textContent = 'You\'ve lost!'
         compScore++
     }
-    showScore.textContent = `Your score --> ${userScore} ${compScore} <-- AI score`;
+    showScore.textContent = `Your score --> ${userScore} : ${compScore} <-- AI score`;
     gameOver();
 }
 
@@ -86,6 +86,6 @@ function reset () {
     btns.forEach((element) => {
         element.removeAttribute('disabled')
     });
-    showScore.textContent = `Your score --> ${userScore} ${compScore} <-- AI score`;
-    outcomemsg.textContent = '';
+    showScore.textContent = `Your score --> ${userScore} : ${compScore} <-- AI score`;
+    outcomemsg.textContent = 'Choose to start:';
 }

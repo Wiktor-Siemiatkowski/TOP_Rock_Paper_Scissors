@@ -1,3 +1,9 @@
+* {
+  color: #39FF14;
+  font-family: 'Lobster', cursive;
+  text-shadow: 2px 2px #092E20;
+}
+
 html {
     height: 100%;
 }
@@ -9,30 +15,37 @@ body {
     align-items: center;
     margin: 0;
     height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background : linear-gradient(
-      to bottom right,
-      hsl(0, 0%, 0%) 0%,
-      hsl(125.96, 63.18%, 5.26%) 3.5%,
-      hsl(125.96, 63.18%, 10.28%) 8.1%,
-      hsl(125.96, 63.18%, 15.04%) 13.9%,
-      hsl(125.96, 63.18%, 19.54%) 20.4%,
-      hsl(125.96, 63.18%, 23.76%) 27.7%,
-      hsl(125.96, 63.18%, 27.69%) 35.5%,
-      hsl(125.96, 63.18%, 31.32%) 43.6%,
-      hsl(125.96, 63.18%, 34.63%) 51.9%,
-      hsl(125.96, 63.18%, 37.6%) 60.2%,
-      hsl(125.96, 63.18%, 40.21%) 68.3%,
-      hsl(125.96, 63.18%, 42.44%) 76%,
-      hsl(125.96, 63.18%, 44.26%) 83.3%,
-      hsl(125.96, 63.18%, 45.64%) 89.8%,
-      hsl(125.96, 63.18%, 46.52%) 95.4%,
-      hsl(125.96, 63.18%, 46.86%) 100%
-    );
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  button {
+    background-color: black;
+    border: solid;
+    border-color: #ECF87F;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  .title {
+    font-size: 64px;
+  }
+
+  .outcome {
+    color: #ECF87F;
+    font-size: 32px;
   }
 
   .score {
     margin: 40px;
-    font-size: 32px;
+    font-size: 48px;
+  }
+  
+  .btns {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    width: 100px;
+    height: 40px;
   }
